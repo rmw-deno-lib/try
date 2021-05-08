@@ -6,8 +6,8 @@
     "src/index.coffee"
   ],
   "names": [],
-  "mappings": ";AAAA,OAAA,QAAe,CAAC,GAAD,CAAA,GAAA;SACb,IAAI,OAAJ,CAAY,CAAC,OAAD,CAAA,GAAA;WAAa,UAAA,CAAW,OAAX,EAAoB,GAAA,GAAM,IAA1B;EAAb,CAAZ;AADa",
+  "mappings": ";AAAA,IAAA;;AAAA,OAAA,IAAa,OAAN,MAAA,KAAA;EACL,WAAY,UAAA,CAAA;IAAC,IAAC,CAAA;IACZ,IAAC,CAAA,GAAD,GAAO;IACP,IAAC,CAAA,KAAD,GAAS,WAAA,CACP,IAAC,CAAA,GADM,EAEP,IAAC,CAAA,QAFM;EAFC;;EAOZ,GAAI,CAAA,CAAA;WACF,OAAO,CAAC,GAAR,CAAY,IAAC,CAAA,GAAb;EADE;;EAGJ,GAAI,CAAC,QAAD,EAAW,GAAX,EAAgB,MAAI,IAApB,CAAA;IACF,IAAG,GAAH;MACE,GAAA,CAAA,EADF;;WAEA,IAAC,CAAA,GAAG,CAAC,IAAL,CAAU,CAAC,QAAD,EAAW,GAAX,EAAgB,QAAhB,CAAV;EAHE;;AAXC;;AAgBP,KAAA,GAAQ,IAAI,IAAJ,CAAS,IAAT;;AAER,OAAA,QAAe,KAAK,CAAC,GAAG,CAAC,IAAV,CAAe,KAAf",
   "sourcesContent": [
-    "export default (sec)=>\n  new Promise((resolve) => setTimeout(resolve, sec * 1000))\n\n"
+    "export class Cron\n  constructor:(@interval)->\n    @job = []\n    @timer = setInterval(\n      @run\n      @interval\n    )\n\n  run:->\n    console.log @job\n\n  add:(interval, job, now=true)->\n    if now\n      job()\n    @job.push [interval, job, interval]\n\nMCron = new Cron(6000)\n\nexport default MCron.add.bind(MCron)\n\n\n"
   ]
 }

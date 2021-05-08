@@ -14,8 +14,26 @@ export {default as mcron} from 'https://deno.land/x/mcron@0.0.0/lib/index.js'
 source code
 
 ```coffee
-export default (sec)=>
-  new Promise((resolve) => setTimeout(resolve, sec * 1000))
+export class Cron
+  constructor:(@interval)->
+    @job = []
+    @timer = setInterval(
+      @run
+      @interval
+    )
+
+  run:->
+    console.log @job
+
+  add:(interval, job, now=true)->
+    if now
+      job()
+    @job.push [interval, job, interval]
+
+MCron = new Cron(6000)
+
+export default MCron.add.bind(MCron)
+
 
 
 ```
@@ -30,7 +48,7 @@ import mcron from './index.js'
 
 do =>
   mcron 1,=>
-    console.log new Date()
+    console.log new Date().toLocaleString()
 
 
 ```
@@ -44,7 +62,7 @@ import mcron from './index.js';
 
 (() => {
   return mcron(1, () => {
-    return console.log(new Date());
+    return console.log(new Date().toLocaleString());
   });
 })();
 
