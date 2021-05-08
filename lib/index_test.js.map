@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "index_test.js",
+  "sourceRoot": "..",
+  "sources": [
+    "src/index_test.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,OAAO,KAAP,MAAA;;AAGG,CAAA,CAAA,CAAA,GAAA;SACD,KAAA,CAAM,CAAN,EAAQ,CAAA,CAAA,GAAA;WACN,OAAO,CAAC,GAAR,CAAY,IAAI,IAAJ,CAAA,CAAZ;EADM,CAAR;AADC,CAAA",
+  "sourcesContent": [
+    "import mcron from './index.js'\n\n\ndo =>\n  mcron 1,=>\n    console.log new Date()\n\n"
+  ]
+}

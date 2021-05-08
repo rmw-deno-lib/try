@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "index.js",
+  "sourceRoot": "..",
+  "sources": [
+    "src/index.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,OAAA,QAAe,CAAC,GAAD,CAAA,GAAA;SACb,IAAI,OAAJ,CAAY,CAAC,OAAD,CAAA,GAAA;WAAa,UAAA,CAAW,OAAX,EAAoB,GAAA,GAAM,IAA1B;EAAb,CAAZ;AADa",
+  "sourcesContent": [
+    "export default (sec)=>\n  new Promise((resolve) => setTimeout(resolve, sec * 1000))\n\n"
+  ]
+}
