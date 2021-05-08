@@ -2,19 +2,19 @@
 
 try await a function , when throw error will console.error(error)
 
-export in your `deps.js`
+## export in your `deps.js`
 
 ```
-export {default as _try} from 'https://deno.land/x/try@0.0.2/lib/index.js'
+export {default as _try} from 'https://deno.land/x/try@0.0.3/lib/index.js'
 ```
 
-source code
+## source code
 
 ```coffee
 #include ./src/index.coffee
 ```
 
-use example
+## use example
 
 coffeescript version
 
