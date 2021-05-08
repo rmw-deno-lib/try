@@ -1,7 +1,7 @@
-import {mcron} from './index.js'
+import _try from './index.js'
 
+test = (a, b, c)=>
+  console.log "args", a, b ,c
+  throw new Error('error')
 
-do =>
-  mcron 1,=>
-    console.log new Date().toLocaleString()
-
+_try test, 1, 2, 3

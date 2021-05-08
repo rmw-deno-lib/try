@@ -1,11 +1,11 @@
-# rmw_crontab 
+# try 
 
-Given a time interval, the task is run periodically, and the default interval has 1 minute,1 hour or 1 day
+try run await a function , else console.error(error)
 
 export in your `deps.js`
 
 ```
-export {mcron,hcron,dcron} from 'https://deno.land/x/rmw_crontab@0.0.1/lib/index.js'
+export {default as _try} from 'https://deno.land/x/try@0.0.1/lib/index.js'
 ```
 
 source code

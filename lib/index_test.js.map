@@ -6,8 +6,8 @@
     "src/index_test.coffee"
   ],
   "names": [],
-  "mappings": ";AAAA,OAAA;EAAQ,KAAR;CAAA,MAAA;;AAGG,CAAA,CAAA,CAAA,GAAA;SACD,KAAA,CAAM,CAAN,EAAQ,CAAA,CAAA,GAAA;WACN,OAAO,CAAC,GAAR,CAAY,IAAI,IAAJ,CAAA,CAAU,CAAC,cAAX,CAAA,CAAZ;EADM,CAAR;AADC,CAAA",
+  "mappings": ";AAAA,IAAA;;AAAA,OAAO,IAAP,MAAA;;AAEA,IAAA,GAAO,CAAC,CAAD,EAAI,CAAJ,EAAO,CAAP,CAAA,GAAA;EACL,OAAO,CAAC,GAAR,CAAY,MAAZ,EAAoB,CAApB,EAAuB,CAAvB,EAA0B,CAA1B;EACA,MAAM,IAAI,KAAJ,CAAU,OAAV;AAFD;;AAIP,IAAA,CAAK,IAAL,EAAW,CAAX,EAAc,CAAd,EAAiB,CAAjB",
   "sourcesContent": [
-    "import {mcron} from './index.js'\n\n\ndo =>\n  mcron 1,=>\n    console.log new Date().toLocaleString()\n\n"
+    "import _try from './index.js'\n\ntest = (a, b, c)=>\n  console.log \"args\", a, b ,c\n  throw new Error('error')\n\n_try test, 1, 2, 3\n"
   ]
 }
