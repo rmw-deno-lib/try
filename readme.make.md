@@ -1,6 +1,6 @@
 # try 
 
-try run await a function , else console.error(error)
+try await a function , when throw error will console.error(error)
 
 export in your `deps.js`
 
