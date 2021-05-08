@@ -5,7 +5,7 @@ Given a time interval, the task is run periodically, and the default interval ha
 export in your `deps.js`
 
 ```
-export {mcron,hcron,dcron} from 'https://deno.land/x/rmw_crontab@0.0.9/lib/index.js'
+export {mcron,hcron,dcron} from 'https://deno.land/x/rmw_crontab@0.0.1/lib/index.js'
 ```
 
 source code
