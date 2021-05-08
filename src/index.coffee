@@ -2,7 +2,7 @@ export class Cron
   constructor:(@interval)->
     @job = []
     @timer = setInterval(
-      @run
+      @run.bind(@)
       @interval
     )
 
@@ -15,7 +15,11 @@ export class Cron
     @job.push [interval, job, interval]
 
 MCron = new Cron(6000)
+HCron = new Cron(3600000)
+DCron = new Cron(3600000*24)
 
-export default MCron.add.bind(MCron)
+export mcron = MCron.add.bind(MCron)
+export hcron = HCron.add.bind(HCron)
+export dcron = DCron.add.bind(DCron)
 
 

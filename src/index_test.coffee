@@ -1,4 +1,4 @@
-import mcron from './index.js'
+import {mcron} from './index.js'
 
 
 do =>

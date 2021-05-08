@@ -1,12 +1,11 @@
-# mcron 
+# rmw_crontab 
 
-Given a time interval, the task is run periodically, and the default minimum time interval is 1 minute.
-
+Given a time interval, the task is run periodically, and the default interval has 1 minute,1 hour or 1 day
 
 export in your `deps.js`
 
 ```
-export {default as mcron} from 'https://deno.land/x/mcron@0.0.0/lib/index.js'
+export {mcron,hcron,dcron} from 'https://deno.land/x/rmw_crontab@0.0.0/lib/index.js'
 ```
 
 source code
