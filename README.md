@@ -7,7 +7,7 @@ try await a function , when throw error will console.error(error)
 export in your `deps.js`
 
 ```
-export {default as _try} from 'https://deno.land/x/try@0.0.1/lib/index.js'
+export {default as _try} from 'https://deno.land/x/try@0.0.2/lib/index.js'
 ```
 
 source code
